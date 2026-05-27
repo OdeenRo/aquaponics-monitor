@@ -151,6 +151,12 @@ activemq-data/
 .env
 .envrc
 .venv
+
+# MQTT broker runtime data
+broker/data/*
+broker/log/*
+!broker/data/.gitkeep
+!broker/log/.gitkeep
 env/
 venv/
 ENV/

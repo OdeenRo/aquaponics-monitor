@@ -1,0 +1,12 @@
+services:
+  broker:
+    image: eclipse-mosquitto:2.0
+    container_name: aqm-broker
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./broker/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./broker/data:/mosquitto/data
+      - ./broker/log:/mosquitto/log
+    restart: unless-stopped
