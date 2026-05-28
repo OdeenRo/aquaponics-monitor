@@ -38,16 +38,52 @@ Nevoi concrete:
 
 ---
 
-## 4. Valoarea pe Faze
+## 4. Faze de Implementare
 
-> Definiția completă a fazelor (valoare + checklist + status curent) se află în **[`docs/PROJECT_CONTEXT.md` — Secțiunea 8](PROJECT_CONTEXT.md)**.
+### Faza 1 — Simulator + Arhitectură de Bază ✅ Completă *(2026-05-28)*
 
-| Fază | Valoare principală | Status |
-|---|---|---|
-| **Faza 1** — Simulator + arhitectură locală | Stack demonstrabil, arhitectură validată fără hardware | ✅ Completă |
-| **Faza 2** — Cloud Azure | Acces remote permanent, URL fix | ⏳ Pending |
-| **Faza 3** — Hardware real ESP32 | Date reale, zero modificări arhitectură | ⏳ Pending |
-| **Faza 4** — Automatizare completă | Fermierul devine observator, nu operator | ⏳ Viitor |
+**Valoare:** Arhitectura validată end-to-end fără hardware. Stack demonstrabil, praguri calibrate, dashboard funcțional.
+
+- [x] Structură repository GitHub
+- [x] Simulator Python — date realiste (bounded random walk + ciclu zi/noapte)
+- [x] MQTT Broker local (Docker — Mosquitto 2.0)
+- [x] Backend Python — MQTT subscribe, procesare, in-memory store
+- [x] Alerte Telegram — cod complet, necesită credențiale în `.env`
+- [x] Dashboard web — carduri senzori live, refresh 5s
+- [x] Commit + push GitHub (`OdeenRo/aquaponics-monitor`)
+- [x] Docker Compose pentru mediul local de dev
+- [x] Test stack end-to-end — 9 senzori live verificați
+
+---
+
+### Faza 2 — Cloud Deployment Azure ⏳ Pending
+
+**Valoare:** Sistem accesibil de oriunde, URL fix, monitorizare de la birou sau din mașină.
+
+- [ ] MQTT Broker pe Azure (Container Instance)
+- [ ] Backend deployed pe Azure
+- [ ] Dashboard public cu URL fix
+- [ ] CI/CD din GitHub Actions
+
+---
+
+### Faza 3 — Hardware Real ⏳ Pending
+
+**Valoare:** Date reale în loc de simulate. Zero modificări în backend sau dashboard — acesta e succesul arhitectural al Fazei 1.
+
+- [ ] Firmware MicroPython pe ESP32
+- [ ] Integrare senzori fizici (DS18B20, DHT22, Atlas EZO-pH, EZO-DO)
+- [ ] Înlocuire simulator cu ESP32 real
+
+---
+
+### Faza 4 — Automatizare Completă ⏳ Viitor
+
+**Valoare:** Fermierul devine observator, nu operator. Intervențiile manuale dispar.
+
+- [ ] Control pompe via releu (ESP32)
+- [ ] Dozare automată pH
+- [ ] Senzori automatici NH₄/NO₂
 
 ---
 
