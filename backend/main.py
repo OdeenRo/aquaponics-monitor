@@ -1,12 +1,17 @@
 import asyncio
 import json
 import os
+import sys
 from datetime import datetime
 from typing import Any
 
 import aiomqtt
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+# aiomqtt uses add_reader/add_writer which require SelectorEventLoop on Windows
+if sys.platform == "win32":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 from backend.alerts import send_alert
 

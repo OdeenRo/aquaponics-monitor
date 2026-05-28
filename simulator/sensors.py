@@ -3,10 +3,15 @@ import json
 import os
 import random
 import math
+import sys
 from datetime import datetime, timezone
 
 import aiomqtt
 from dotenv import load_dotenv
+
+# aiomqtt uses add_reader/add_writer which require SelectorEventLoop on Windows
+if sys.platform == "win32":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 load_dotenv()
 

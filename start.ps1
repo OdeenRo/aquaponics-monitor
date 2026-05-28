@@ -10,7 +10,7 @@ docker compose up -d broker
 Start-Sleep -Seconds 2
 
 Write-Host "[2/4] Starting backend (port 8000)..." -ForegroundColor Cyan
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$root'; .\.venv\Scripts\uvicorn backend.main:app --port 8000 --reload"
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$root'; & '$venv' run_backend.py"
 
 Start-Sleep -Seconds 1
 
