@@ -2,7 +2,7 @@
 
 ## 1. Context și Problemă
 
-O seră de 18m × 6m în București adăpostește un ecosistem acvaponic complex: un bazin de 9.600L cu 117 pești, trei trepte de filtrare biologică și paturi de cultură cu o suprafață totală de ~40m².
+O seră de 12m × 6m în București adăpostește un ecosistem acvaponic complex: un bazin de 9.600L cu 117 pești, trei trepte de filtrare biologică și paturi de cultură cu o suprafață totală de ~40m².
 
 Ecosistemul este **viu și fragil**. Parametrii apei se pot deteriora în ore, nu în zile:
 - O pompa oprită noaptea → oxigenul dizolvat scade sub 4 mg/L → pești morți dimineața

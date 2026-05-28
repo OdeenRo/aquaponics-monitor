@@ -45,6 +45,7 @@ Folderul `docs/` este sacru. Fiecare fișier are un rol unic și non-negociabil:
 | Fișier | Rol | Echivalent TunsFlow |
 |---|---|---|
 | **`vision.md`** | De ce există AQM. Big picture, valoare, faze de evoluție. | `vision.md` |
+| **`system_params.md`** | Sursa unică de adevăr pentru fizica sistemului: dimensiuni, volume, populație, calcule derivate. | *(specific AQM)* |
 | **`data_flow.md`** | MQTT topics, format payload, model date senzori, praguri de alertă. | `data_structures.md` |
 | **`use_cases.md`** | Scenariile de utilizare: monitoring normal, alerte, ciclare biologică, tranziție hardware. | `use_cases.md` |
 | **`screens.md`** | Descrierea dashboard-ului: ce afișăm, cum, cu ce prioritate vizuală. | `screens.md` |

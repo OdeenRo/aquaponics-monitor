@@ -19,35 +19,14 @@
 
 ## 2. Physical System Description
 
-### Greenhouse
-- Metal tunnel with transparent film, ~18m × 6m
-- Location: outdoor Bucharest
+> Dimensiuni, volume, populație pești și calcule derivate: vezi **[`docs/system_params.md`](system_params.md)**
 
-### Fish Tank
-- Dimensions: 4m × 2m × 1.2m
-- Volume: **9,600 L**
-- Current population: **117 fish** (100 crucian carp 10-15cm + 15 common carp fry 10-15cm + 1 carp ~350g + 1 carp ~1kg)
-- Cycling species: Carassius carassius
-
-### Filtration System (outside greenhouse)
-| Component | Volume | Role |
-|---|---|---|
-| Settling tank | ~1,000 L | First stage — sediment |
-| Biofilter tank | ~500-700 L | Nitrifying bacteria |
-| Aeration/pump tank | ~500 L | Oxygenation + water return |
-
-### Grow Beds (inside greenhouse)
-| Bed | Dimensions | Medium | Crops |
-|---|---|---|---|
-| Central | 1.875m × 12m × 0.3m | Hydroton | Tomatoes + cucumbers |
-| Left lateral | 1.25m × 12m × 0.3m | Water (NFT) | TBD |
-| Right lateral | 1.25m × 12m × 0.3m | Water (NFT) | TBD |
-
-### Hydraulic System
-- 3 pumps, total flow ~10,000 L/h
-- Flow: Tank → Settling → Biofilter → Aeration → Beds → lateral return → Tank
-- Well water (no chlorine)
-- **Total system volume: ~14,500-15,000 L**
+Sumar rapid:
+- Seră: **12m × 6m × ~3.5m**
+- Bazin: **4m × 2m × 1.2m = 9,600 L**, 117 pești, ~5–10 kg biomasă
+- Filtrare (exterior): ~2,000–2,200 L (decantare + biofiltru + aerare)
+- Paturi cultură: 52.5 m² total (hydroton central + NFT lateral ×2)
+- **Volum total sistem: ~14,500–15,000 L**, ciclu complet ~1.5h
 
 ---
 
