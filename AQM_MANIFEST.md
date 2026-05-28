@@ -121,9 +121,11 @@ Niciodată token Telegram, credențiale Azure sau configurări sensibile în cod
 
 ## 6. Faze de Implementare
 
+> Definiția completă (valoare + checklist + status) în **`docs/PROJECT_CONTEXT.md` — Secțiunea 8**.
+
 | Fază | Descriere | Status |
 |---|---|---|
-| **Faza 1** | Simulator + arhitectură de bază (stack complet local) | 🔄 În progres |
+| **Faza 1** | Simulator + arhitectură de bază (stack complet local) | ✅ Completă |
 | **Faza 2** | Cloud deployment pe Azure (MQTT + Backend + Dashboard) | ⏳ Pending |
 | **Faza 3** | Hardware real — ESP32 înlocuiește simulatorul | ⏳ Pending |
 | **Faza 4** | Automatizare completă (control pompe, dozare pH) | ⏳ Viitor |

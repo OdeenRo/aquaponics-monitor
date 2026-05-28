@@ -40,23 +40,14 @@ Nevoi concrete:
 
 ## 4. Valoarea pe Faze
 
-### Faza 1 — Simulator (valoare: arhitectură și tooling)
-Fără hardware, dar cu un stack complet funcțional. Valoarea este:
-- Arhitectura validată end-to-end (MQTT → Backend → Telegram → Dashboard)
-- Pragurile de alertă calibrate cu date simulate realiste
-- Dashboard funcțional care poate fi arătat și demonstrat
+> Definiția completă a fazelor (valoare + checklist + status curent) se află în **[`docs/PROJECT_CONTEXT.md` — Secțiunea 8](PROJECT_CONTEXT.md)**.
 
-### Faza 2 — Cloud (valoare: acces remote permanent)
-Sistemul devine accesibil de oriunde, nu doar pe rețeaua locală.
-Un URL fix pentru dashboard, broker MQTT pe Azure = monitorizare de la birou sau din mașină.
-
-### Faza 3 — Hardware real (valoare: monitorizare reală)
-ESP32 înlocuiește simulatorul. Datele devin reale.
-**Zero modificări în backend sau dashboard** — acesta este succesul arhitectural al Fazei 1.
-
-### Faza 4 — Automatizare (valoare: intervenție zero)
-Pompele se opresc și pornesc automat. pH-ul se dozează automat.
-Fermierul devine observator, nu operator.
+| Fază | Valoare principală | Status |
+|---|---|---|
+| **Faza 1** — Simulator + arhitectură locală | Stack demonstrabil, arhitectură validată fără hardware | ✅ Completă |
+| **Faza 2** — Cloud Azure | Acces remote permanent, URL fix | ⏳ Pending |
+| **Faza 3** — Hardware real ESP32 | Date reale, zero modificări arhitectură | ⏳ Pending |
+| **Faza 4** — Automatizare completă | Fermierul devine observator, nu operator | ⏳ Viitor |
 
 ---
 

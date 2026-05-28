@@ -132,34 +132,52 @@ aquaponics-monitor/
 
 ---
 
-## 8. Implementation Plan
+## 8. Faze de Implementare *(sursa unică — referențiat din MANIFEST și vision.md)*
 
-### Phase 1 – Simulator + Basic Architecture (CURRENT)
-- [x] GitHub repository structure
-- [x] Python simulator — generates realistic data for all sensors
-- [x] Local MQTT Broker (Docker) for development
-- [x] Python backend — MQTT subscribe, data processing
-- [x] Telegram alerts — notifications on threshold breach
-- [x] Simple web dashboard — real-time charts
-- [ ] First commit + push to GitHub
-- [ ] Docker Compose for local dev environment
-- [ ] Test full stack end-to-end
+### Faza 1 — Simulator + Arhitectură de Bază ✅ Completă *(2026-05-28)*
 
-### Phase 2 – Cloud Deployment
-- [ ] MQTT Broker on Azure (Container Instance)
-- [ ] Backend deployed on Azure
-- [ ] Publicly accessible dashboard (fixed URL)
-- [ ] CI/CD from GitHub Actions
+**Valoare:** Arhitectura validată end-to-end fără hardware. Stack demonstrabil, praguri calibrate, dashboard funcțional.
 
-### Phase 3 – Real Hardware
-- [ ] MicroPython firmware on ESP32
-- [ ] Physical sensor integration (DS18B20, DHT22, Atlas EZO-pH, EZO-DO)
-- [ ] Replace simulator with real ESP32 — zero backend changes
+- [x] Structură repository GitHub
+- [x] Simulator Python — date realiste pentru toți senzorii (bounded random walk + ciclu zi/noapte)
+- [x] MQTT Broker local (Docker — Mosquitto 2.0)
+- [x] Backend Python — MQTT subscribe, procesare date, in-memory store
+- [x] Alerte Telegram — cod complet, necesită credențiale în `.env`
+- [x] Dashboard web — carduri senzori live, refresh 5s
+- [x] Commit + push GitHub (`OdeenRo/aquaponics-monitor`)
+- [x] Docker Compose pentru mediul local de dev
+- [x] Test stack end-to-end — 9 senzori live verificați
 
-### Phase 4 – Full Automation
-- [ ] Pump control via relay (ESP32)
-- [ ] Automatic pH dosing
-- [ ] Automatic NH₄/NO₂ sensors
+---
+
+### Faza 2 — Cloud Deployment Azure ⏳ Pending
+
+**Valoare:** Sistem accesibil de oriunde, URL fix, monitorizare de la birou sau din mașină.
+
+- [ ] MQTT Broker pe Azure (Container Instance)
+- [ ] Backend deployed pe Azure
+- [ ] Dashboard public cu URL fix
+- [ ] CI/CD din GitHub Actions
+
+---
+
+### Faza 3 — Hardware Real ⏳ Pending
+
+**Valoare:** Date reale în loc de simulate. Zero modificări în backend sau dashboard — acesta e succesul arhitectural al Fazei 1.
+
+- [ ] Firmware MicroPython pe ESP32
+- [ ] Integrare senzori fizici (DS18B20, DHT22, Atlas EZO-pH, EZO-DO)
+- [ ] Înlocuire simulator cu ESP32 real
+
+---
+
+### Faza 4 — Automatizare Completă ⏳ Viitor
+
+**Valoare:** Fermierul devine observator, nu operator. Intervențiile manuale dispar.
+
+- [ ] Control pompe via releu (ESP32)
+- [ ] Dozare automată pH
+- [ ] Senzori automatici NH₄/NO₂
 
 ---
 
