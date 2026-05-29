@@ -56,15 +56,15 @@ Nevoi concrete:
 
 ---
 
-### Faza 2 — Cloud Deployment Azure 🔄 În progres *(2026-05-29)*
+### Faza 2 — Cloud Deployment Azure ✅ Completă *(2026-05-30)*
 
 **Valoare:** Sistem accesibil de oriunde, URL fix, monitorizare de la birou sau din mașină.
 
 - [x] MQTT Broker pe Azure — Docker container pe VM `apmf-vm` (germanywestcentral)
 - [x] Backend deployed pe Azure — Docker container, `restart: unless-stopped`
-- [x] Dashboard public accesibil — `http://20.113.89.89` (IP dinamic, se schimbă la repornire VM)
-- [ ] IP static sau domeniu DNS — IP-ul actual se schimbă la fiecare `az vm start`
-- [ ] CI/CD din GitHub Actions — update-urile se fac manual: `git pull` + `docker compose up` prin SSH
+- [x] IP static — `20.113.134.32` (nu se schimbă la repornire VM)
+- [x] Dashboard public — `http://20.113.134.32`
+- [x] CI/CD GitHub Actions — orice push pe `main` deployează automat via Azure CLI + Service Principal
 
 ---
 
