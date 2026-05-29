@@ -110,3 +110,10 @@ async def proxy_sensors() -> dict:
     async with httpx.AsyncClient() as client:
         resp = await client.get(f"{BACKEND_URL}/sensors")
         return resp.json()
+
+
+@app.post("/api/test-alert")
+async def proxy_test_alert() -> dict:
+    async with httpx.AsyncClient() as client:
+        resp = await client.post(f"{BACKEND_URL}/test-alert")
+        return resp.json()
