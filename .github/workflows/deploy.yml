@@ -11,23 +11,15 @@ jobs:
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
-          printf '%s' "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
-          echo "" >> ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY_B64 }}" | base64 -d > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          echo "=== Key header ==="
-          head -1 ~/.ssh/id_rsa
-          echo "=== Key lines ==="
-          wc -l ~/.ssh/id_rsa
-          echo "=== ssh-keyscan ==="
-          ssh-keyscan -T 30 -H ${{ secrets.VM_IP }} >> ~/.ssh/known_hosts 2>&1
-          echo "=== known_hosts ==="
-          cat ~/.ssh/known_hosts
+          ssh-keyscan -T 30 -H ${{ secrets.VM_IP }} >> ~/.ssh/known_hosts 2>/dev/null
 
       - name: Deploy to VM via SSH
         run: |
-          ssh -vvv -o ConnectTimeout=30 azureuser@${{ secrets.VM_IP }} '
+          ssh -o ConnectTimeout=30 azureuser@${{ secrets.VM_IP }} '
             cd /app &&
             git pull &&
             sudo docker compose -f docker-compose.prod.yml up -d --build &&
             sudo docker image prune -f
-          ' 2>&1
+          '
