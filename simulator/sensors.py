@@ -59,8 +59,13 @@ class SensorState:
         day_offset = self._day_temp_offset()
 
         self.ph = self._walk(self.ph, 0.02, 6.4, 8.0)
-        self.temp_water = self._walk(self.temp_water + day_offset * 0.1, 0.1, 14.0, 30.0)
-        self.temp_air = self._walk(self.temp_air + day_offset * 0.3, 0.2, 10.0, 38.0)
+        # Mean reversion spre temperatura-tinta zi/noapte (nu offset cumulativ)
+        water_target = 22.0 + day_offset * 0.8
+        air_target = 24.0 + day_offset * 1.5
+        self.temp_water += (water_target - self.temp_water) * 0.01
+        self.temp_water = self._walk(self.temp_water, 0.15, 14.0, 30.0)
+        self.temp_air += (air_target - self.temp_air) * 0.01
+        self.temp_air = self._walk(self.temp_air, 0.2, 10.0, 38.0)
         self.humidity = self._walk(self.humidity, 0.5, 50.0, 98.0)
         self.do = self._walk(self.do, 0.05, 3.5, 12.0)
 

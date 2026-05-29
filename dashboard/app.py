@@ -109,7 +109,8 @@ async def dashboard() -> HTMLResponse:
 async def proxy_sensors() -> dict:
     async with httpx.AsyncClient() as client:
         resp = await client.get(f"{BACKEND_URL}/sensors")
-        return resp.json()
+    from fastapi.responses import JSONResponse
+    return JSONResponse(content=resp.json(), headers={"Cache-Control": "no-store"})
 
 
 @app.post("/api/test-alert")
