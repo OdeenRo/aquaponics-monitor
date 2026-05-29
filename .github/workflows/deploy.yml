@@ -8,18 +8,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY_B64 }}" | base64 -d > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -T 30 -H ${{ secrets.VM_IP }} >> ~/.ssh/known_hosts 2>/dev/null
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy to VM via SSH
-        run: |
-          ssh -o ConnectTimeout=30 azureuser@${{ secrets.VM_IP }} '
-            cd /app &&
-            git pull &&
-            sudo docker compose -f docker-compose.prod.yml up -d --build &&
-            sudo docker image prune -f
-          '
+      - name: Deploy via Azure CLI
+        uses: azure/cli@v2
+        with:
+          azcliversion: latest
+          inlineScript: |
+            az vm run-command invoke \
+              --resource-group apmf-rg \
+              --name apmf-vm \
+              --command-id RunShellScript \
+              --scripts "cd /app && git pull && sudo docker compose -f docker-compose.prod.yml up -d --build && sudo docker image prune -f"
