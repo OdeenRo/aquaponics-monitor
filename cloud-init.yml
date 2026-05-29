@@ -1,0 +1,9 @@
+#cloud-config
+packages:
+  - git
+
+runcmd:
+  - curl -fsSL https://get.docker.com | sh
+  - usermod -aG docker azureuser
+  - git clone https://github.com/OdeenRo/aquaponics-monitor /app
+  - chown -R azureuser:azureuser /app
