@@ -1,7 +1,7 @@
 services:
   broker:
     image: eclipse-mosquitto:2.0
-    container_name: aqm-broker
+    container_name: apmf-broker
     ports:
       - "1883:1883"
       - "9001:9001"

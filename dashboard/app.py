@@ -17,7 +17,7 @@ HTML = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aquaponics Monitor</title>
+    <title>APMF</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', sans-serif; background: #0f1923; color: #e0e0e0; }
@@ -39,7 +39,7 @@ HTML = """
 </head>
 <body>
     <header>
-        <h1>Aquaponics Monitor</h1>
+        <h1>APMF</h1>
         <span>Live sensor data</span>
     </header>
     <div id="status">Connecting...</div>

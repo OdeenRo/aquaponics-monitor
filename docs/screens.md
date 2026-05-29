@@ -1,8 +1,8 @@
-# AQM: Interfețele Grafice (Screens)
+# APMF: Interfețele Grafice (Screens)
 
 *"Un dashboard bun se citește în 3 secunde. Dacă ai nevoie de mai mult, e prea complicat." — Arya*
 
-AQM are o singură interfață web: **Dashboard-ul de monitoring în timp real**.
+APMF are o singură interfață web: **Dashboard-ul de monitoring în timp real**.
 Nu există login, nu există pagini multiple, nu există meniuri. Datele critice sunt imediat vizibile.
 
 ---

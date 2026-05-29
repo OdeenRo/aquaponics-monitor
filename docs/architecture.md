@@ -1,4 +1,4 @@
-# AQM: Arhitectura Tehnică
+# APMF: Arhitectura Tehnică
 
 ---
 

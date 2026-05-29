@@ -1,4 +1,4 @@
-# AQM — Start all services
+# APMF — Start all services
 # Run from project root: .\start.ps1
 
 $root = $PSScriptRoot
@@ -23,7 +23,7 @@ Write-Host "[4/4] Starting simulator..." -ForegroundColor Cyan
 Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$root'; & '$venv' -m simulator.sensors"
 
 Write-Host ""
-Write-Host "AQM running:" -ForegroundColor Green
+Write-Host "APMF running:" -ForegroundColor Green
 Write-Host "  Dashboard  -> http://localhost:8001" -ForegroundColor Green
 Write-Host "  Backend API -> http://localhost:8000/sensors" -ForegroundColor Green
 Write-Host "  MQTT Broker -> localhost:1883" -ForegroundColor Green

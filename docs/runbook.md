@@ -1,4 +1,4 @@
-# AQM: Runbook Operațional
+# APMF: Runbook Operațional
 
 ---
 
@@ -50,7 +50,7 @@ Deschide 4 ferestre PowerShell: broker (Docker) + backend + dashboard + simulato
 **1. MQTT Broker**
 ```powershell
 docker compose up -d broker
-# Verificare: docker ps → aqm-broker running
+# Verificare: docker ps → apmf-broker running
 ```
 
 **2. Backend** *(important: folosește `run_backend.py`, nu `uvicorn` direct)*
@@ -96,8 +96,8 @@ Rezultat așteptat: JSON cu `ph`, `temperature_water`, `dissolved_oxygen`, etc.
 Expune dashboardul cu un URL fix pentru colegi sau demonstrații:
 
 ```powershell
-npx localtunnel --port 8001 --subdomain aqm-fuior
-# URL: https://aqm-fuior.loca.lt
+npx localtunnel --port 8001 --subdomain apmf-fuior
+# URL: https://apmf-fuior.loca.lt
 ```
 
 La prima accesare, utilizatorii văd o pagină de confirmare localtunnel (buton "Click to Continue") — normal, măsură anti-bot.

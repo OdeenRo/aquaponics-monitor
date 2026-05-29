@@ -1,4 +1,4 @@
-# AQM: Fluxul de Date (Data Flow)
+# APMF: Fluxul de Date (Data Flow)
 
 Acest document este sursa de adevăr pentru **toate datele care circulă prin sistem**: topicuri MQTT, format payload, model de date al senzorilor și pragurile de alertă.
 

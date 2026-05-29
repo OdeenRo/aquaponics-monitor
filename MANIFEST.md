@@ -1,4 +1,4 @@
-# AQM — Project Manifest
+# APMF — Project Manifest
 
 ## Proiectul
 Sistem de monitorizare în timp real pentru o instalație acvaponică de 9,600L din București — 117 pești, 3 trepte de filtrare, paturi de cultură. Scopul: fermierul doarme liniștit pentru că datele îl trezesc ele, nu inspecția manuală.
@@ -7,7 +7,7 @@ Sistem de monitorizare în timp real pentru o instalație acvaponică de 9,600L 
 ---
 
 ## Elders Framework
-| Elder | Rol | Influență în AQM |
+| Elder | Rol | Influență în APMF |
 |---|---|---|
 | **Scalex** | Arhitect software | Arhitectura MQTT, modularitate simulator↔ESP32 |
 | **Valon** | Strateg business | Fiecare feature aduce valoare reală fermierului |
@@ -27,7 +27,7 @@ Sistem de monitorizare în timp real pentru o instalație acvaponică de 9,600L 
 ## Harta Docs
 | Fișier | Întrebarea la care răspunde |
 |---|---|
-| `docs/vision.md` | De ce există AQM? (misiune, utilizator, faze) |
+| `docs/vision.md` | De ce există APMF? (misiune, utilizator, faze) |
 | `docs/architecture.md` | Cum e construit tehnic? (ADRs, stack, convenții, contracte MQTT) |
 | `docs/runbook.md` | Cum îl pornesc / deployez? |
 | `docs/system_params.md` | Care sunt parametrii fizici ai instalației? |

@@ -1,4 +1,4 @@
-# AQM: Parametrii Fizici ai Sistemului
+# APMF: Parametrii Fizici ai Sistemului
 
 > Sursa unică de adevăr pentru toate dimensiunile, volumele și caracteristicile fizice ale instalației.
 > Orice prag de alertă, calibrare de simulator sau calcul de densitate **pornește de aici**.

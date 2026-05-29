@@ -48,7 +48,7 @@ Open `http://localhost:8001` — live sensor data appears within 10 seconds.
 
 | File | Contents |
 |---|---|
-| `docs/vision.md` | Why AQM exists, implementation phases |
+| `docs/vision.md` | Why APMF exists, implementation phases |
 | `docs/architecture.md` | ADRs, tech stack, MQTT contracts |
 | `docs/runbook.md` | Setup, running services, troubleshooting |
 | `docs/system_params.md` | Physical system parameters |

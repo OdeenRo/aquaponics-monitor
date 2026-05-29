@@ -1,4 +1,4 @@
-# AQM: Viziunea Sistemului
+# APMF: Viziunea Sistemului
 
 ## 1. Context și Problemă
 
@@ -13,9 +13,9 @@ Ecosistemul este **viu și fragil**. Parametrii apei se pot deteriora în ore, n
 
 ---
 
-## 2. Misiunea AQM
+## 2. Misiunea APMF
 
-**AQM transformă un ecosistem biologic opac într-un sistem transparent și alertat.**
+**APMF transformă un ecosistem biologic opac într-un sistem transparent și alertat.**
 
 Obiective concrete:
 1. **Vizibilitate 24/7** — orice parametru critic este vizibil de pe orice dispozitiv, în timp real
@@ -87,7 +87,7 @@ Nevoi concrete:
 
 ---
 
-## 5. Ce NU este AQM
+## 5. Ce NU este APMF
 
 - **Nu este un ERP agricol** — nu gestionăm stocuri, vânzări sau recoltare
 - **Nu este un sistem SCADA industrial** — nu avem nevoie de redundanță de nivel enterprise

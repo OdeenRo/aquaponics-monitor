@@ -6,8 +6,11 @@ from datetime import datetime
 from typing import Any
 
 import aiomqtt
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+load_dotenv()
 
 # aiomqtt uses add_reader/add_writer which require SelectorEventLoop on Windows
 if sys.platform == "win32":
@@ -15,7 +18,7 @@ if sys.platform == "win32":
 
 from backend.alerts import send_alert
 
-app = FastAPI(title="Aquaponics Monitor API")
+app = FastAPI(title="APMF API")
 
 app.add_middleware(
     CORSMiddleware,

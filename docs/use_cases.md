@@ -1,8 +1,8 @@
-# AQM: Registrul Use Case-urilor
+# APMF: Registrul Use Case-urilor
 
 *"Un senzor care nu alertează la timp nu este un senzor — este un martor tăcut al unui dezastru."*
 
-Acest document descrie scenariile principale prin care sistemul AQM aduce valoare reală.
+Acest document descrie scenariile principale prin care sistemul APMF aduce valoare reală.
 
 ---
 
