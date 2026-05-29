@@ -71,7 +71,26 @@ class SensorState:
         self.nitrate = max(0.0, self.nitrate + random.uniform(0.0, 0.002))  # slow accumulation
         self.water_level = self._walk(self.water_level, 0.2, 80.0, 120.0)
 
-        return self._snapshot()
+        return self._maybe_spike(self._snapshot())
+
+    def _maybe_spike(self, snapshot: dict) -> dict:
+        """4% chance per tick of a realistic aquaponics anomaly (1 tick duration)."""
+        SPIKE_EVENTS = [
+            ("ph",                8.2,  "pH alkalinity spike (hard water)"),
+            ("ph",                6.1,  "pH drop (CO2 buildup)"),
+            ("dissolved_oxygen",  3.9,  "DO drop (pump issue)"),
+            ("dissolved_oxygen",  4.6,  "DO low (hot night)"),
+            ("ammonia",           1.3,  "NH4 spike (overfeeding)"),
+            ("ammonia",           2.2,  "NH4 critical (system crash)"),
+            ("nitrite",           1.2,  "NO2 spike (bacterial stress)"),
+            ("temperature_water", 29.2, "Water temp high (heat wave)"),
+        ]
+        if random.random() > 0.04:
+            return snapshot
+        sensor, value, label = random.choice(SPIKE_EVENTS)
+        snapshot[sensor] = round(value + random.uniform(-0.05, 0.05), 3)
+        print(f"[SPIKE] {label} → {sensor}={snapshot[sensor]}")
+        return snapshot
 
     def _snapshot(self) -> dict:
         return {

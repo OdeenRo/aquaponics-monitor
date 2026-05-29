@@ -98,6 +98,12 @@ async def get_sensor(sensor_key: str) -> Any:
     return latest_readings.get(sensor_key, {})
 
 
+@app.post("/test-alert")
+async def test_alert() -> dict[str, str]:
+    await send_alert("WARNING", "ph", 8.3, "pH", 7.8)
+    return {"status": "ok", "message": "Test alert sent"}
+
+
 @app.get("/health")
 async def health() -> dict[str, str]:
     return {"status": "ok", "timestamp": datetime.utcnow().isoformat()}
