@@ -57,6 +57,25 @@ HTML = """
             water_level: { label: "Water Level", unit: "cm" },
         };
 
+        const THRESHOLDS = {
+            ph:                { wl: 6.5,  wh: 7.8,   cl: 6.0,  ch: 8.5  },
+            temperature_water: { wl: 15.0, wh: 28.0,  cl: 10.0, ch: 32.0 },
+            temperature_air:   { wl: null, wh: 35.0,  cl: null, ch: 40.0 },
+            dissolved_oxygen:  { wl: 5.0,  wh: null,  cl: 4.0,  ch: null },
+            ammonia:           { wl: null, wh: 1.0,   cl: null, ch: 2.0  },
+            nitrite:           { wl: null, wh: 1.0,   cl: null, ch: 2.0  },
+            nitrate:           { wl: null, wh: 200.0, cl: null, ch: 300.0},
+            humidity:          { wl: null, wh: 90.0,  cl: null, ch: 95.0 },
+        };
+
+        function alertLevel(key, value) {
+            const t = THRESHOLDS[key];
+            if (!t) return '';
+            if ((t.ch && value >= t.ch) || (t.cl && value <= t.cl)) return 'critical';
+            if ((t.wh && value >= t.wh) || (t.wl && value <= t.wl)) return 'warning';
+            return '';
+        }
+
         async function fetchData() {
             try {
                 const res = await fetch('/api/sensors');
@@ -75,14 +94,16 @@ HTML = """
             for (const [key, meta] of Object.entries(LABELS)) {
                 const reading = data[key];
                 const card = document.createElement('div');
-                card.className = 'card';
                 if (reading) {
+                    const level = alertLevel(key, reading.value);
+                    card.className = 'card' + (level ? ' ' + level : '');
                     card.innerHTML = `
                         <div class="label">${meta.label}</div>
                         <div class="value">${reading.value.toFixed(2)}</div>
                         <div class="unit">${meta.unit}</div>
                         <div class="ts">${reading.timestamp}</div>`;
                 } else {
+                    card.className = 'card';
                     card.innerHTML = `
                         <div class="label">${meta.label}</div>
                         <div class="value" style="color:#546e7a">—</div>
