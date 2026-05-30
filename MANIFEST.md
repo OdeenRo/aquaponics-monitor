@@ -34,6 +34,7 @@ Sistem de monitorizare în timp real pentru o instalație acvaponică de 9,600L 
 | `docs/data_flow.md` | Care sunt topicurile MQTT, payload-urile și pragurile de alertă? |
 | `docs/screens.md` | Cum arată dashboard-ul? |
 | `docs/use_cases.md` | Care sunt scenariile de utilizare? |
+| `docs/hardware.md` | Ce hardware trebuie cumpărat? (lista Faza 3 cu checkboxuri) |
 
 ---
 
