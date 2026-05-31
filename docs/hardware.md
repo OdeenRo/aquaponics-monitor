@@ -11,7 +11,7 @@
 
 | Status | Component | Model | Qty | Preț est. | Unde cumperi |
 |---|---|---|---|---|---|
-| [ ] | Microcontroller | ESP32-WROOM-32 (dev board) | 1 | ~15€ | AliExpress / Amazon |
+| [ ] | Microcontroller | **Placa ESP32, 30 pini, USB-C** | 1 | ~50 RON | [eMag](https://www.emag.ro/search/ESP32-WROOM-32) — 515 recenzii, prima opțiune |
 | [ ] | Senzor pH apă | Atlas Scientific EZO-pH Kit | 1 | ~165€ | atlasscientific.com |
 | [ ] | Senzor temperatură apă | DS18B20 waterproof | 3 | ~5€/buc | AliExpress |
 | [ ] | Senzor O₂ dizolvat | Atlas Scientific EZO-DO Kit | 1 | ~200€ | atlasscientific.com |
