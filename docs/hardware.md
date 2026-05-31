@@ -20,13 +20,13 @@
 
 ### 🟡 Necesari pentru instalare
 
-| Status | Component | Note |
-|---|---|---|
-| [ ] | Cablu 4-conductor 10m+ | DS18B20 e la distanță de ESP32 |
-| [ ] | Rezistență 4.7kΩ (×5) | Pull-up obligatoriu pentru DS18B20 |
-| [ ] | Breadboard + jumper wires | Prototipare inițială |
-| [ ] | Sursă alimentare 5V/2A | USB sau adaptor |
-| [ ] | Cutie waterproof IP65 | Pentru ESP32 lângă bazin |
+| Status | Component | Preț | Link | Note |
+|---|---|---|---|---|
+| [ ] | Breadboard 830p + 65 fire jumper | ~33 RON | [eMag](https://www.emag.ro/modul-putere-breadboard-mb102-cu-breadboard-830-puncte-si-65-fire-jumper-ai01146/pd/D02RDB2BM/) | Include și modul alimentare MB102 |
+| [ ] | Rezistențe 4.7kΩ (set 20 buc) | ~25 RON | [eMag](https://www.emag.ro/set-20-bucati-rezistenta-4-7k-kohm-carbon-film-rw25cf-0-25w-5-4700-rezistor-uni-ohm-rw25cf-4-7k/pd/DSGXYWYBM/) | Pull-up obligatoriu pentru DS18B20 |
+| [ ] | Sursă alimentare 5V/2A USB-C | — | Orice încărcător telefon USB-C | ESP32-ul tău are USB-C |
+| [ ] | Cutie waterproof IP65 aluminiu | ~100 RON | [eMag](https://www.emag.ro/carcasa-pentru-placi-de-circuit-enforose-aluminiu-rezistent-la-apa-80x64x24mm-lrm20250321-0761/pd/D4KZF23BM/) | 80x64x24mm — pentru ESP32 singur; ia mai mare (~120x80mm) dacă vrei și breadboard înăuntru |
+| [ ] | Cablu 4-conductor 10m+ | ~15 RON | eMag / magazin electric | Doar dacă ESP32-ul e departe de senzori (DS18B20 vin cu cablu 1m) |
 
 ### 🟢 Calibrare (de la Hydroponika.ro — mai rapid local)
 
