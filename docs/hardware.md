@@ -22,7 +22,7 @@
 
 | Status | Component | Preț | Link | Note |
 |---|---|---|---|---|
-| [ ] | Breadboard 830p + 65 fire jumper | ~33 RON | [eMag](https://www.emag.ro/modul-putere-breadboard-mb102-cu-breadboard-830-puncte-si-65-fire-jumper-ai01146/pd/D02RDB2BM/) | Include și modul alimentare MB102 |
+| [ ] | Breadboard 830p + 65 fire jumper | ~17 RON | [eMag](https://www.emag.ro/kit-breadboard-830-gauri-65-fire-modul-tensiune-alimentare-mb102-jh027/pd/DY1YP6BBM/) | Include și modul alimentare MB102 — 4.92/5 |
 | [ ] | Rezistențe 4.7kΩ (set 20 buc) | ~25 RON | [eMag](https://www.emag.ro/set-20-bucati-rezistenta-4-7k-kohm-carbon-film-rw25cf-0-25w-5-4700-rezistor-uni-ohm-rw25cf-4-7k/pd/DSGXYWYBM/) | Pull-up obligatoriu pentru DS18B20 |
 | [ ] | Sursă alimentare 5V/2A USB-C | — | Orice încărcător telefon USB-C | ESP32-ul tău are USB-C |
 | [ ] | Cutie waterproof IP65 aluminiu | ~100 RON | [eMag](https://www.emag.ro/carcasa-pentru-placi-de-circuit-enforose-aluminiu-rezistent-la-apa-80x64x24mm-lrm20250321-0761/pd/D4KZF23BM/) | 80x64x24mm — pentru ESP32 singur; ia mai mare (~120x80mm) dacă vrei și breadboard înăuntru |
