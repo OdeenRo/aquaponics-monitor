@@ -11,13 +11,12 @@
 
 | Status | Component | Model | Qty | Preț | Link |
 |---|---|---|---|---|---|
-| [ ] | Microcontroller | Placa ESP32, 30 pini, USB-C | 1 | ~50 RON | [eMag](https://www.emag.ro/placa-esp32-cu-esp-wroom-32-30-pini-usb-tip-c-3874784221589/pd/D0JH59YBM/) |
-| [ ] | Senzor pH apă | Atlas Scientific EZO-pH Kit | 1 | ~165€ | [atlasscientific.com](https://atlas-scientific.com/kits/ph-kit/) |
-| [ ] | Senzor temperatură apă | DS18B20 waterproof inox, cablu 1m (set 3) | 1 set | ~47 RON | [eMag](https://www.emag.ro/set-de-3-senzori-de-temperatura-digitali-ds18b20-din-otel-inoxidabil-impermeabili-cablu-de-1-m-interval-de-masurare-55-125-et000004/pd/D5R0HR3BM/) |
-| [ ] | Senzor O₂ dizolvat | Atlas Scientific EZO-DO Kit | 1 | ~200€ | [atlasscientific.com](https://atlas-scientific.com/kits/dissolved-oxygen-kit/) |
-| [ ] | Senzor temp + umiditate aer | DHT22 AM2302 | 2 | ~26 RON/buc | [eMag](https://www.emag.ro/senzor-de-temperatura-si-umiditate-am2302-dht22-ai142-s271/pd/DXSFYMMBM/) ⚠️ stoc limitat |
-| [ ] | Senzor nivel apă | HC-SR04**P** (3.3V!) | 1 | ~21 RON | [eMag](https://www.emag.ro/senzor-ultrasonic-de-masurare-distanta-hc-sr04p-dc-3-5-5v-bmx636/pd/DTM2K83BM/) |
-| [ ] | Senzor debit apă | YF-S201 G1/2 (Robofun) | 1 | ~40 RON | [eMag](https://www.emag.ro/senzor-debit-apa-robofun-yf-s201-g1-2-1-30l-min-00004036/pd/DVYWPYYBM/) |
+| [x] | Microcontroller | Placa ESP32, 30 pini, USB-C | 1 | ~50 RON | [eMag](https://www.emag.ro/placa-esp32-cu-esp-wroom-32-30-pini-usb-tip-c-3874784221589/pd/D0JH59YBM/) |
+| [ ] | Senzor pH apă | Atlas Scientific EZO-pH Kit (KIT-101P) | 1 | €181 | [eztronics.nl](https://www.eztronics.nl/webshop3/) |
+| [x] | Senzor temperatură apă | DS18B20 waterproof inox, cablu 1m (set 3) | 1 set | ~47 RON | [eMag](https://www.emag.ro/set-de-3-senzori-de-temperatura-digitali-ds18b20-din-otel-inoxidabil-impermeabili-cablu-de-1-m-interval-de-masurare-55-125-et000004/pd/D5R0HR3BM/) |
+| [x] | Senzor temp + umiditate aer | DHT22 AM2302 | 2 | ~26 RON/buc | [eMag](https://www.emag.ro/senzor-de-temperatura-si-umiditate-am2302-dht22-ai142-s271/pd/DXSFYMMBM/) |
+| [x] | Senzor nivel apă | HC-SR04**P** (3.3V!) | 1 | ~21 RON | [eMag](https://www.emag.ro/senzor-ultrasonic-de-masurare-distanta-hc-sr04p-dc-3-5-5v-bmx636/pd/DTM2K83BM/) |
+| [x] | Senzor debit apă | YF-S201 G1/2 (Robofun) | 1 | ~40 RON | [eMag](https://www.emag.ro/senzor-debit-apa-robofun-yf-s201-g1-2-1-30l-min-00004036/pd/DVYWPYYBM/) |
 
 ### 🟡 Necesari pentru instalare
 
@@ -52,11 +51,11 @@
 
 | Categorie | Estimat |
 |---|---|
-| Senzori critici (Atlas Scientific) | ~380€ |
-| Senzori simpli + ESP32 (AliExpress) | ~60€ |
+| EZO-pH Kit (eztronics.nl) | €181 |
+| Senzori eMag (ESP32, DS18B20, DHT22, HC-SR04P, YF-S201) | ~160 RON |
 | Instalare (cabluri, rezistențe, cutie) | ~30€ |
-| Calibrare (hydroponika.ro) | ~40 RON |
-| **Total Faza 3** | **~470€ + 40 RON** |
+| Calibrare (hydroponika.ro) | ~133 RON |
+| **Total Faza 3** | **~211€ + ~293 RON** |
 
 ---
 
@@ -73,5 +72,6 @@
 
 | Component | Model | Preț est. | Motiv amânare |
 |---|---|---|---|
-| Senzor amoniu | Atlas Scientific EZO-NH3 | ~500€ | Prea scump; înlocuit cu test manual săptămânal |
+| **Senzor O₂ dizolvat** | Atlas Scientific EZO-DO Kit (KIT-103DX) | €411 | DO acoperit indirect: YF-S201 (oprire pompă = criza principală) + DS18B20 (temp >26°C = risc). Carașul tolerează bine DO scăzut. De reevaluat după 3-6 luni de funcționare reală. [eztronics.nl](https://www.eztronics.nl/webshop3/) |
+| Senzor amoniu | Atlas Scientific EZO-NH3 | ~500€ | Înlocuit cu test manual săptămânal (kit API) |
 | Senzor nitriti/nitrati | — | ~400€+ | Idem |
