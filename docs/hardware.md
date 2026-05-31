@@ -28,12 +28,9 @@
 | [ ] | Cutie waterproof IP65 aluminiu | ~100 RON | [eMag](https://www.emag.ro/carcasa-pentru-placi-de-circuit-enforose-aluminiu-rezistent-la-apa-80x64x24mm-lrm20250321-0761/pd/D4KZF23BM/) | 80x64x24mm — pentru ESP32 singur; ia mai mare (~120x80mm) dacă vrei și breadboard înăuntru |
 | [ ] | Cablu 4-conductor 10m+ | ~15 RON | eMag / magazin electric | Doar dacă ESP32-ul e departe de senzori (DS18B20 vin cu cablu 1m) |
 
-### 🟢 Calibrare (de la Hydroponika.ro — mai rapid local)
+### 🟢 Calibrare
 
-| Status | Component | Preț est. | Note |
-|---|---|---|---|
-| [ ] | Soluții calibrare pH (4.01 + 7.01) | ~50 RON | Obligatorii pentru EZO-pH |
-| [ ] | Soluție KCl depozitare sondă pH | ~83 RON | Prelungește viața sondei |
+> Kitul EZO-pH de la Atlas Scientific include deja soluțiile de calibrare (pH 4.01 + 7.01) și soluția KCl de depozitare. Nu e nevoie de comenzi separate.
 
 ---
 
@@ -51,11 +48,10 @@
 
 | Categorie | Estimat |
 |---|---|
-| EZO-pH Kit (eztronics.nl) | €181 |
+| EZO-pH Kit (eztronics.nl) — include calibrare | €181 |
 | Senzori eMag (ESP32, DS18B20, DHT22, HC-SR04P, YF-S201) | ~160 RON |
-| Instalare (cabluri, rezistențe, cutie) | ~30€ |
-| Calibrare (hydroponika.ro) | ~133 RON |
-| **Total Faza 3** | **~211€ + ~293 RON** |
+| Instalare (breadboard, rezistențe, cutie) | ~158 RON |
+| **Total Faza 3** | **~181€ + ~318 RON** |
 
 ---
 
