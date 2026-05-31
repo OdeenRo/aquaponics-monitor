@@ -9,15 +9,15 @@
 
 ### 🔴 Critici — fără astea nu pornești
 
-| Status | Component | Model | Qty | Preț est. | Unde cumperi |
+| Status | Component | Model | Qty | Preț | Link |
 |---|---|---|---|---|---|
-| [ ] | Microcontroller | **Placa ESP32, 30 pini, USB-C** | 1 | ~50 RON | [eMag](https://www.emag.ro/search/ESP32-WROOM-32) — 515 recenzii, prima opțiune |
-| [ ] | Senzor pH apă | Atlas Scientific EZO-pH Kit | 1 | ~165€ | atlasscientific.com |
-| [ ] | Senzor temperatură apă | DS18B20 waterproof | 3 | ~5€/buc | AliExpress |
-| [ ] | Senzor O₂ dizolvat | Atlas Scientific EZO-DO Kit | 1 | ~200€ | atlasscientific.com |
-| [ ] | Senzor temp + umiditate aer | DHT22 | 2 | ~8€/buc | AliExpress |
-| [ ] | Senzor nivel apă | HC-SR04 ultrasonic | 1 | ~3€ | AliExpress |
-| [ ] | Senzor debit apă | YF-S201 | 1 | ~5€ | AliExpress |
+| [ ] | Microcontroller | Placa ESP32, 30 pini, USB-C | 1 | ~50 RON | [eMag](https://www.emag.ro/placa-esp32-cu-esp-wroom-32-30-pini-usb-tip-c-3874784221589/pd/D0JH59YBM/) |
+| [ ] | Senzor pH apă | Atlas Scientific EZO-pH Kit | 1 | ~165€ | [atlasscientific.com](https://atlas-scientific.com/kits/ph-kit/) |
+| [ ] | Senzor temperatură apă | DS18B20 waterproof inox (set 5) | 1 set | ~80 RON | [eMag](https://www.emag.ro/set-5-senzori-de-temperatura-ds18b20-waterproof-inox-6x50mm-negru-fg711k0225-07151-426/pd/DX34DF3BM/) |
+| [ ] | Senzor O₂ dizolvat | Atlas Scientific EZO-DO Kit | 1 | ~200€ | [atlasscientific.com](https://atlas-scientific.com/kits/dissolved-oxygen-kit/) |
+| [ ] | Senzor temp + umiditate aer | DHT22 AM2302 | 2 | ~26 RON/buc | [eMag](https://www.emag.ro/senzor-de-temperatura-si-umiditate-am2302-dht22-ai142-s271/pd/DXSFYMMBM/) ⚠️ stoc limitat |
+| [ ] | Senzor nivel apă | HC-SR04**P** (3.3V!) | 1 | ~21 RON | [eMag](https://www.emag.ro/senzor-ultrasonic-de-masurare-distanta-hc-sr04p-dc-3-5-5v-bmx636/pd/DTM2K83BM/) |
+| [ ] | Senzor debit apă | YF-S201 G1/2 (Robofun) | 1 | ~40 RON | [eMag](https://www.emag.ro/senzor-debit-apa-robofun-yf-s201-g1-2-1-30l-min-00004036/pd/DVYWPYYBM/) |
 
 ### 🟡 Necesari pentru instalare
 
