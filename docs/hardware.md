@@ -22,8 +22,8 @@
 
 | Status | Component | Preț | Link | Note |
 |---|---|---|---|---|
-| [ ] | Breadboard 830p + 65 fire jumper | ~17 RON | [eMag](https://www.emag.ro/kit-breadboard-830-gauri-65-fire-modul-tensiune-alimentare-mb102-jh027/pd/DY1YP6BBM/) | Include și modul alimentare MB102 — 4.92/5 |
-| [ ] | Rezistențe 4.7kΩ (set 20 buc) | ~25 RON | [eMag](https://www.emag.ro/set-20-bucati-rezistenta-4-7k-kohm-carbon-film-rw25cf-0-25w-5-4700-rezistor-uni-ohm-rw25cf-4-7k/pd/DSGXYWYBM/) | Pull-up obligatoriu pentru DS18B20 |
+| [x] | Breadboard 830p + 65 fire jumper | ~17 RON | [eMag](https://www.emag.ro/kit-breadboard-830-gauri-65-fire-modul-tensiune-alimentare-mb102-jh027/pd/DY1YP6BBM/) | Include și modul alimentare MB102 — 4.92/5 |
+| [x] | Rezistențe 4.7kΩ (set 20 buc) | ~25 RON | [eMag](https://www.emag.ro/set-20-bucati-rezistenta-4-7k-kohm-carbon-film-rw25cf-0-25w-5-4700-rezistor-uni-ohm-rw25cf-4-7k/pd/DSGXYWYBM/) | Pull-up obligatoriu pentru DS18B20 |
 | [ ] | Sursă alimentare 5V/2A USB-C | — | Orice încărcător telefon USB-C | ESP32-ul tău are USB-C |
 | [ ] | Cutie aluminiu IP65, 80×125×58mm | 176 RON | [eMag](https://www.emag.ro/carcasa-aluminiu-80mmx125mmx58mm-ip65-combiplast-t131340/pd/DWTCN3YBM/) | IP65 confirmat, garnitură + suporturi PCB incluse — potrivită lângă bazin |
 | [ ] | Cablu 4-conductor 10m+ | ~15 RON | eMag / magazin electric | Doar dacă ESP32-ul e departe de senzori (DS18B20 vin cu cablu 1m) |
