@@ -1,24 +1,16 @@
-WIFI_SSID = "YOUR_WIFI_SSID"
-WIFI_PASSWORD = "YOUR_WIFI_PASSWORD"
+# Configuratie firmware APMF — fara secrete (merge pe GitHub)
+# Secretele (WiFi, MQTT host) sunt in firmware/secrets.py (gitignored)
 
-MQTT_HOST = "YOUR_AZURE_MQTT_HOST"
-MQTT_PORT = 1883
-MQTT_CLIENT_ID = "esp32_aquaponics_01"
+MQTT_CLIENT_ID = "esp32_apmf_01"
+PUBLISH_INTERVAL_SEC = 10
 
-# DS18B20 temperature sensors (OneWire)
-PIN_TEMP_WATER = 4
-PIN_TEMP_BED = 5
+# Pinii GPIO — senzori
+PIN_DS18B20   = 14  # OneWire — temperatura apa (DS18B20 x3 pe acelasi bus)
+PIN_DHT22     = 4   # temperatura + umiditate aer (DHT22)
+PIN_TRIG      = 5   # HC-SR04P nivel apa — trigger
+PIN_ECHO      = 18  # HC-SR04P nivel apa — echo
+PIN_YF_S201   = 19  # YF-S201 debit apa — interrupt
 
-# DHT22 air sensors
-PIN_DHT_INSIDE = 14
-PIN_DHT_OUTSIDE = 27
-
-# HC-SR04 ultrasonic water level
-PIN_TRIG = 12
-PIN_ECHO = 13
-
-# Atlas Scientific UART (EZO-pH, EZO-DO via UART)
-PIN_UART_TX = 17
-PIN_UART_RX = 16
-
-PUBLISH_INTERVAL_SEC = 30
+# Atlas Scientific EZO-pH (UART) — adaugat cand soseste kitul
+PIN_UART_TX   = 17
+PIN_UART_RX   = 16
