@@ -1,45 +1,55 @@
-import time
-import json
-import network
-import machine
+import dht, machine, network, time, json
 from umqtt.simple import MQTTClient
-from config import (
-    WIFI_SSID, WIFI_PASSWORD,
-    MQTT_HOST, MQTT_PORT, MQTT_CLIENT_ID,
-    PUBLISH_INTERVAL_SEC,
-)
+from secrets import WIFI_NETWORKS, MQTT_HOST, MQTT_PORT
+from config import MQTT_CLIENT_ID, PUBLISH_INTERVAL_SEC, PIN_DHT22
 
 
-def connect_wifi() -> None:
+def connect_wifi():
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
-    wlan.connect(WIFI_SSID, WIFI_PASSWORD)
-    while not wlan.isconnected():
-        time.sleep(0.5)
+    for ssid, password in WIFI_NETWORKS:
+        print("WiFi: conectare la", ssid)
+        wlan.connect(ssid, password)
+        for _ in range(20):
+            if wlan.isconnected():
+                print("WiFi OK:", wlan.ifconfig()[0])
+                return wlan
+            time.sleep(0.5)
+        wlan.disconnect()
+    print("WiFi FAIL - nicio retea disponibila")
+    return None
 
 
-def publish(client: MQTTClient, topic: str, sensor_id: str, value: float, unit: str, location: str) -> None:
+def publish_reading(client, topic, sensor_id, value, unit, location):
     payload = json.dumps({
         "sensor_id": sensor_id,
-        "value": value,
+        "value": round(value, 2),
         "unit": unit,
-        "timestamp": "2000-01-01T00:00:00Z",  # replace with NTP time when available
         "location": location,
-    })
-    client.publish(f"aquaponics/sensors/{topic}", payload)
+        "timestamp": "2026-01-01T00:00:00Z",
+    }).encode()
+    client.publish("aquaponics/sensors/" + topic, payload)
 
 
-def main() -> None:
-    connect_wifi()
+wlan = connect_wifi()
+if not wlan:
+    raise RuntimeError("WiFi indisponibil")
 
-    client = MQTTClient(MQTT_CLIENT_ID, MQTT_HOST, MQTT_PORT)
-    client.connect()
+client = MQTTClient(MQTT_CLIENT_ID, MQTT_HOST, MQTT_PORT, keepalive=60)
+client.connect()
+print("MQTT OK ->", MQTT_HOST)
 
-    while True:
-        # TODO: read real sensor values here
-        # publish(client, "ph", "ph_main", ph_value, "pH", "fish_tank")
-        # publish(client, "temperature/water", "temp_water_main", temp_value, "°C", "fish_tank")
-        time.sleep(PUBLISH_INTERVAL_SEC)
+sensor = dht.DHT22(machine.Pin(PIN_DHT22))
+print("Start — publish la fiecare", PUBLISH_INTERVAL_SEC, "secunde")
 
-
-main()
+while True:
+    try:
+        sensor.measure()
+        temp = sensor.temperature()
+        hum = sensor.humidity()
+        publish_reading(client, "temperature/air", "temp_air_1", temp, "C", "greenhouse")
+        publish_reading(client, "humidity", "dht22_1", hum, "%", "greenhouse")
+        print("Publicat:", temp, "C |", hum, "%")
+    except Exception as e:
+        print("Eroare senzor:", e)
+    time.sleep(PUBLISH_INTERVAL_SEC)
