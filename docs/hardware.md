@@ -27,6 +27,8 @@
 | [ ] | Sursă alimentare 5V/2A USB-C | — | Orice încărcător telefon USB-C | ESP32-ul tău are USB-C |
 | [ ] | Cutie aluminiu IP65, 80×125×58mm | 176 RON | [eMag](https://www.emag.ro/carcasa-aluminiu-80mmx125mmx58mm-ip65-combiplast-t131340/pd/DWTCN3YBM/) | IP65 confirmat, garnitură + suporturi PCB incluse — potrivită lângă bazin |
 | [ ] | Cablu 4-conductor 10m+ | ~15 RON | eMag / magazin electric | Doar dacă ESP32-ul e departe de senzori (DS18B20 vin cu cablu 1m) |
+| [ ] | Presgarnituri PG7 (×6) | ~2-3 RON/buc | magazin electric / eMag | Intrări cablu etanșe în cutia IP65 — câte una per senzor |
+| [ ] | Ecran ventilație DHT22 (×2) | ~10 RON/buc | eMag / imprimat 3D | Protejează senzorul de ploaie directă și soare, permite circulația aerului |
 
 ### 🟢 Calibrare
 
