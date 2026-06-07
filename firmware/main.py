@@ -1,7 +1,7 @@
 import dht, machine, network, ntptime, onewire, ds18x20, time, json
 from umqtt.simple import MQTTClient
 from secrets import WIFI_NETWORKS, MQTT_HOST, MQTT_PORT
-from config import MQTT_CLIENT_ID, PUBLISH_INTERVAL_SEC, PIN_DHT22, PIN_DS18B20
+from config import MQTT_CLIENT_ID, PUBLISH_INTERVAL_SEC, PIN_DHT22, PIN_DS18B20, PIN_YF_S201
 
 
 def connect_wifi():
@@ -60,6 +60,16 @@ ow = onewire.OneWire(machine.Pin(PIN_DS18B20))
 ds = ds18x20.DS18X20(ow)
 ds_roms = ds.scan()
 print("DS18B20 senzori gasiti:", len(ds_roms))
+
+# YF-S201 — debit apa
+flow_count = 0
+def flow_pulse(pin):
+    global flow_count
+    flow_count += 1
+
+flow_pin = machine.Pin(PIN_YF_S201, machine.Pin.IN, machine.Pin.PULL_UP)
+flow_pin.irq(trigger=machine.Pin.IRQ_RISING, handler=flow_pulse)
+print("YF-S201 activ pe GPIO", PIN_YF_S201)
 print("Start — publish la fiecare", PUBLISH_INTERVAL_SEC, "secunde")
 
 while True:
@@ -82,5 +92,12 @@ while True:
                 print("DS18B20:", t, "C")
         except Exception as e:
             print("Eroare DS18B20:", e)
+
+    # Debit apa — calcul pe intervalul de publicare
+    pulses = flow_count
+    flow_count = 0
+    flow_lpm = round((pulses / PUBLISH_INTERVAL_SEC) / 7.5, 2)
+    publish_reading(client, "water_flow", "yf_s201_main", flow_lpm, "L/min", "pump_pipe")
+    print("YF-S201:", pulses, "pulsuri ->", flow_lpm, "L/min")
 
     time.sleep(PUBLISH_INTERVAL_SEC)

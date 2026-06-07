@@ -66,6 +66,7 @@ HTML = """
             temperature_air:  { label: "Air Temp", unit: "°C" },
             humidity:         { label: "Humidity", unit: "%" },
             temperature_water:{ label: "Water Temp", unit: "°C" },
+            water_flow:       { label: "Water Flow", unit: "L/min" },
         };
 
         const DUMMY_LABELS = {
