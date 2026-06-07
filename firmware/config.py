@@ -5,7 +5,7 @@ MQTT_CLIENT_ID = "esp32_apmf_01"
 PUBLISH_INTERVAL_SEC = 10
 
 # Pinii GPIO — senzori
-PIN_DS18B20   = 14  # OneWire — temperatura apa (DS18B20 x3 pe acelasi bus)
+PIN_DS18B20   = 5   # OneWire — temperatura apa (DS18B20 x3 pe acelasi bus) — confirmat D5
 PIN_DHT22     = 4   # temperatura + umiditate aer (DHT22)
 PIN_TRIG      = 5   # HC-SR04P nivel apa — trigger
 PIN_ECHO      = 18  # HC-SR04P nivel apa — echo

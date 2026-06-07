@@ -63,13 +63,13 @@ HTML = """
     </div>
     <script>
         const REAL_LABELS = {
-            temperature_air: { label: "Air Temp", unit: "°C" },
-            humidity:        { label: "Humidity", unit: "%" },
+            temperature_air:  { label: "Air Temp", unit: "°C" },
+            humidity:         { label: "Humidity", unit: "%" },
+            temperature_water:{ label: "Water Temp", unit: "°C" },
         };
 
         const DUMMY_LABELS = {
             ph:               { label: "pH", unit: "pH" },
-            temperature_water:{ label: "Water Temp", unit: "°C" },
             dissolved_oxygen: { label: "Dissolved O₂", unit: "mg/L" },
             ammonia:          { label: "Ammonia NH₄", unit: "mg/L" },
             nitrite:          { label: "Nitrite NO₂", unit: "mg/L" },
